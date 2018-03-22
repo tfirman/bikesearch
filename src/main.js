@@ -25,6 +25,7 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       let body = JSON.parse(response);
+      $('.showResults').empty();
       for (let i=0; i <body.bikes.length; i++){
         $('.showResults').append('<img src='+body.bikes[i].thumb+' alt="bike thumb" height="80" width="80">');
         $('.showResults').append("<h5>"+body.bikes[i].title+"</h5>");
